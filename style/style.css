@@ -1,0 +1,121 @@
+.bg_img {
+    background: url("https://tv-static-cdn.tvplus.com.tr/webtv/new-design/posters/dashboard/film-izle-header-web.webp") center/cover no-repeat;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #00000088;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    padding: 16px 0;
+}
+.navFix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+.list {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.list a {
+    color: #ffffffd9;
+    font: 500 24px "Rubik", sans-serif;
+    text-decoration: none;
+}
+.list a:hover {
+    color: #fff;
+}
+.img {
+    width: 75px;
+}
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 40px;
+}
+.right-side input {
+    width: 300px;
+    height: 52px;
+    border-radius: 40px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding-left: 14px;
+    font: 600 18px arial;
+}
+.login {
+    color: #ffd000;
+    font: 500 24px "Rubik", sans-serif;
+    text-decoration: none;
+}
+.seachIcon{
+    display: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 100000;
+}
+.hamburger{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: #11111196;
+    z-index: 1;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.mobile-menu ul li a {
+    color: #fff;
+    font: 500 24px "Rubik", sans-serif;
+}
+.mobile-menu.show {
+    display: flex;
+}
+
+@media (max-width: 1220px) {
+    .search{display: none;}
+    .seachIcon{display: block;}
+}
+@media (max-width: 1024px) {
+    .list{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
