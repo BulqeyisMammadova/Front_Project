@@ -30,6 +30,12 @@ const janrArr = []
 
 //     });
 
+//         for (const janr of janrArr) {
+//             dropDown.innerHTML += `<li><a href="/pages/category.html?genres=${janr}">${janr}</a></li>`
+//             console.log(janr);
+//         }
+
+
 //     for (let i = 0; i < filterTypeFilms.length; i++) {
 //         const cards = document.createElement("div");
 //         cards.innerHTML = `
@@ -98,10 +104,6 @@ const janrArr = []
 
 
 
-//         for (const janr of janrArr) {
-//             dropDown.innerHTML += `<li><a href="/pages/category.html?genres=${janr}">${janr}</a></li>`
-//             console.log(janr);
-//         }
 
 //     }        
 // }).catch(err=>{
@@ -124,6 +126,13 @@ axios.get('https://api.tvmaze.com/shows')
             }
 
         });
+
+
+        for (const janr of janrArr) {
+            dropDown.innerHTML += `<li><a href="/pages/category.html?genres=${janr}">${janr}</a></li>`
+        }
+
+
         for (let i = 0; i < filterTypeFilms.length; i++) {
             const cards = document.createElement("div");
             cards.innerHTML = `
@@ -187,10 +196,9 @@ axios.get('https://api.tvmaze.com/shows')
                     })
                 }
             });
-                for (const janr of janrArr) {
-                    dropDown.innerHTML += `<li><a href="/pages/category.html?genres=${janr}">${janr}</a></li>`
-                    console.log(janr);
-                }
+                
 
         }
     }).catch(error => console.error(error));
+
+ 
