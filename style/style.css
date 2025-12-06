@@ -1,3 +1,4 @@
+body{background-color: #111;}
 .bg_img {
     background: url("https://tv-static-cdn.tvplus.com.tr/webtv/new-design/posters/dashboard/film-izle-header-web.webp") center/cover no-repeat;
     height: 100vh;
@@ -106,6 +107,75 @@ nav {
 .mobile-menu.show {
     display: flex;
 }
+.filmText{
+    font: 600 32px "Rubik", sans-serif;
+    color: #fff;
+    padding: 20px;
+}
+.imgTitle{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.imgTitle img{
+    max-width: 200px;
+    max-height: 350px;
+}
+#filmType button , .backBtn{
+    margin: 20px 10px;
+    text-align: center;
+    padding: 15px 20px;
+    font: 600 20px "Rubik", sans-serif;
+    border-radius: 15px;
+    color: white;
+    background-color: #ffd000;
+    border: 1px solid #ffd000;
+}
+
+.detail{
+    margin-top: 80px;
+}
+#detail{
+    margin-top: 100px;
+    display: flex;
+   gap: 100px; 
+
+}
+.detailImg{
+    width: 300px;
+    height: 300px;
+}
+.detailImg img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.detailText{
+    color: white;
+}
+.detailText h2{
+    font: 600 42px "Rubik", sans-serif;
+}
+.detailText p{
+    padding: 8px 0;
+    font: 100 22px "Rubik", sans-serif;
+}
+.detailTitle{
+    font: 500 24px "Rubik", sans-serif;
+    padding-right: 10px;
+}
+.summary{
+    max-width: 800px !important;
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1220px) {
     .search{display: none;}
@@ -118,4 +188,10 @@ nav {
     .hamburger{
         display: block;
     }
+    #detail{
+        flex-direction: column;
+        gap: 150px;
+    }
 }
+
+
