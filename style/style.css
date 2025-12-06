@@ -1,14 +1,19 @@
-body{background-color: #111;}
+body {
+    background-color: #111;
+}
+
 .bg_img {
     background: url("https://tv-static-cdn.tvplus.com.tr/webtv/new-design/posters/dashboard/film-izle-header-web.webp") center/cover no-repeat;
     height: 100vh;
 }
+
 .container {
     width: 100%;
     max-width: 1440px;
     margin: auto;
     padding: 0 20px;
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -19,38 +24,46 @@ body{background-color: #111;}
     z-index: 999;
     padding: 16px 0;
 }
+
 .navFix {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 nav {
     display: flex;
     align-items: center;
     gap: 45px;
 }
+
 .list {
     display: flex;
     align-items: center;
     gap: 22px;
 }
+
 .list a {
     color: #ffffffd9;
     font: 500 24px "Rubik", sans-serif;
     text-decoration: none;
 }
+
 .list a:hover {
     color: #fff;
 }
+
 .img {
     width: 75px;
 }
+
 .right-side {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-right: 40px;
 }
+
 .right-side input {
     width: 300px;
     height: 52px;
@@ -61,19 +74,22 @@ nav {
     padding-left: 14px;
     font: 600 18px arial;
 }
+
 .login {
     color: #ffd000;
     font: 500 24px "Rubik", sans-serif;
     text-decoration: none;
 }
-.seachIcon{
+
+.seachIcon {
     display: none;
     color: white;
     cursor: pointer;
     font-size: 24px;
     z-index: 100000;
 }
-.hamburger{
+
+.hamburger {
     display: none;
     font-size: 28px;
     color: white;
@@ -94,34 +110,42 @@ nav {
     align-items: center;
     gap: 20px;
 }
+
 .mobile-menu ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
+
 .mobile-menu ul li a {
     color: #fff;
     font: 500 24px "Rubik", sans-serif;
 }
+
 .mobile-menu.show {
     display: flex;
 }
-.filmText{
+
+.filmText {
     font: 600 32px "Rubik", sans-serif;
     color: #fff;
     padding: 20px;
 }
-.imgTitle{
+
+.imgTitle {
     display: flex;
     flex-wrap: wrap;
     overflow-x: hidden;
 }
-.imgTitle img{
+
+.imgTitle img {
     max-width: 200px;
     max-height: 350px;
 }
-#filmType button , .backBtn{
+
+#filmType button,
+.backBtn {
     margin: 20px 10px;
     text-align: center;
     padding: 15px 20px;
@@ -132,42 +156,49 @@ nav {
     border: 1px solid #ffd000;
 }
 
-.detail{
+.detail {
     margin-top: 80px;
 }
-#detail{
+
+#detail {
     margin-top: 100px;
     display: flex;
-   gap: 100px; 
+    gap: 100px;
 
 }
-.detailImg{
+
+.detailImg {
     width: 300px;
     height: 300px;
 }
+
 .detailImg img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
+
 .detailText h2 {
     font: 600 42px "Rubik", sans-serif;
     color: white;
 }
-.detailText p{
+
+.detailText p {
     padding: 8px 0;
     font: 100 22px "Rubik", sans-serif;
     color: white;
 }
-.detailTitle{
+
+.detailTitle {
     font: 500 24px "Rubik", sans-serif;
     padding-right: 10px;
 }
-.summary{
+
+.summary {
     max-width: 800px !important;
 }
 
-.serachSection{
+.serachSection {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -175,36 +206,79 @@ nav {
     gap: 20px;
     justify-content: center;
 }
-.searchName{
+
+.searchName {
     font: 400 26px "Rubik", sans-serif;
     color: white;
     width: 300px;
 }
-.card{
+
+.card {
     width: 18%;
 }
 
 @media (max-width: 1220px) {
-    .search{display: none;}
-    .seachIcon{display: block;}
-}
-@media (max-width: 1024px) {
-    .list{
+    .search {
         display: none;
     }
-    .hamburger{
+
+    .seachIcon {
         display: block;
     }
-    #detail{
+}
+
+@media (max-width: 1024px) {
+    .list {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #detail {
         flex-direction: column;
         gap: 150px;
     }
 }
-.notFound{
+
+.notFound {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font: 500 50px "Rubik", sans-serif;
     height: 80vh;
+}
+.filmNav{
+    position: relative;
+}
+
+.dropDown {
+    border: 1px solid #333;
+    background-color: #333;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-radius: 25px;
+    display: none;
+    position: absolute;
+}
+.filmNav:hover .dropDown{
+    display: grid;
+}
+.cards{
+    /* margin-top: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font: 500 50px "Rubik", sans-serif;
+    margin: 70px 0; 
 }
