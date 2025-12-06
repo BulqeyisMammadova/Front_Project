@@ -150,15 +150,14 @@ nav {
     border-radius: 10px;
     object-fit: cover;
 }
-.detailText{
-    color: white;
-}
-.detailText h2{
+.detailText h2 {
     font: 600 42px "Rubik", sans-serif;
+    color: white;
 }
 .detailText p{
     padding: 8px 0;
     font: 100 22px "Rubik", sans-serif;
+    color: white;
 }
 .detailTitle{
     font: 500 24px "Rubik", sans-serif;
@@ -168,14 +167,22 @@ nav {
     max-width: 800px !important;
 }
 
-
-
-
-
-
-
-
-
+.serachSection{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    gap: 20px;
+    justify-content: center;
+}
+.searchName{
+    font: 400 26px "Rubik", sans-serif;
+    color: white;
+    width: 300px;
+}
+.card{
+    width: 18%;
+}
 
 @media (max-width: 1220px) {
     .search{display: none;}
@@ -193,5 +200,11 @@ nav {
         gap: 150px;
     }
 }
-
-
+.notFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font: 500 50px "Rubik", sans-serif;
+    height: 80vh;
+}

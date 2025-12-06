@@ -1,6 +1,9 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const filmType = document.getElementById("filmType");
+const search = document.getElementById("search")
+const mainSection = document.querySelector(".mainSection")
+const serachSection = document.querySelector(".serachSection")
 
 hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
@@ -8,12 +11,11 @@ hamburger.addEventListener('click', () => {
 
 
 let filterTypeFilms = [];
-let dataArr = [];
+
 
 fetch("https://api.tvmaze.com/shows").then(res => res.json()).then(data => {
 
     data.forEach(film => {
-        dataArr.push(film);
         if (!filterTypeFilms.includes(film.type)) {
             filterTypeFilms.push(film.type);
         }
@@ -21,7 +23,6 @@ fetch("https://api.tvmaze.com/shows").then(res => res.json()).then(data => {
 
     for (let i = 0; i < filterTypeFilms.length; i++) {
         const cards = document.createElement("div");
-
         cards.innerHTML = `
             <h4 class="filmText">${filterTypeFilms[i]}</h4>
             <div class="imgTitle"></div>
@@ -31,7 +32,7 @@ fetch("https://api.tvmaze.com/shows").then(res => res.json()).then(data => {
 
         const titleImg = cards.querySelector(".imgTitle");
 
-        const typeOfFilm = dataArr.filter(item => item.type == filterTypeFilms[i]);
+        const typeOfFilm = data.filter(item => item.type == filterTypeFilms[i]);
 
 
         let start = 0;
@@ -57,10 +58,35 @@ fetch("https://api.tvmaze.com/shows").then(res => res.json()).then(data => {
         }
 
         
+
+        search.addEventListener("input", (e) => {
+            const currentVal = e.target.value.toLowerCase();
+                   
+            mainSection.style.display = currentVal == "" ? "block" : "none"
+            
+            serachSection.innerHTML = ""
+            const filterData = data.filter(film => film.name.toLowerCase().includes(currentVal))
+            if(filterData.length == 0){
+                const notFound = document.createElement("div");
+                notFound.textContent = "Not Found Films"
+                notFound.classList.add("notFound")
+                serachSection.appendChild(notFound)
+            }else{
+                filterData.forEach(film=>{
+                    const cards = document.createElement("div")
+                   cards.innerHTML += `<div class="card">
+                   <a href="/pages/detail.html?id=${film.id}"><img  src="${film.image.medium}" alt=""></a>
+                    <div>
+                    <h2 class="searchName">${film.name}</h2>
+                    </div>
+                   </div>`
+                   serachSection.appendChild(cards)
+                })
+            }           
+        });
         
     }        
 });
-
 
 
 
