@@ -130,7 +130,7 @@ nav {
 .filmText {
     font: 600 32px "Rubik", sans-serif;
     color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .imgTitle {
@@ -199,11 +199,11 @@ nav {
 }
 
 .serachSection {
-    margin-top: 100px;
+    margin-top: 140px;
     display: flex;
     flex-wrap: wrap;
     overflow-x: hidden;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -211,6 +211,7 @@ nav {
     font: 400 26px "Rubik", sans-serif;
     color: white;
     width: 300px;
+    padding-top: 10px;
 }
 
 .card {
@@ -281,4 +282,21 @@ nav {
     color: white;
     font: 500 50px "Rubik", sans-serif;
     margin: 70px 0; 
+}
+.imgTitle a {
+    display: inline-block; 
+    overflow: hidden;         
+}
+
+.imgTitle a img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgTitle a img:hover {
+    transform: scale(1.05); 
+}
+.ratingStar {
+    color: gold;
+    margin-right: 5px;
+    font-size: 16px;
 }
